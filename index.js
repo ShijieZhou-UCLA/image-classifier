@@ -25,15 +25,15 @@ const demo = async () => {
 
   status('');
 
-  // Make a prediction through the locally hosted cup.jpg.
-  const cupElement = document.getElementById('cup');
-  if (cupElement.complete && cupElement.naturalHeight !== 0) {
-    predict(cupElement);
-    cupElement.style.display = '';
+  // Make a prediction through the locally hosted cat.jpg.
+  const catElement = document.getElementById('cat');
+  if (catElement.complete && catElement.naturalHeight !== 0) {
+    predict(catElement);
+    catElement.style.display = '';
   } else {
-    cupElement.onload = () => {
-      predict(cupElement);
-      cupElement.style.display = '';
+    catElement.onload = () => {
+      predict(catElement);
+      catElement.style.display = '';
     }
   }
 
